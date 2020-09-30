@@ -12,268 +12,377 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(288, 348)
-        MainWindow.setTabShape(QtWidgets.QTabWidget.Rounded)
+	def setupUi(self, MainWindow):
+		MainWindow.setObjectName("MainWindow")
+		MainWindow.resize(288, 348)
+		MainWindow.setTabShape(QtWidgets.QTabWidget.Rounded)
 
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
+		self.centralwidget = QtWidgets.QWidget(MainWindow)
+		self.centralwidget.setObjectName("centralwidget")
 
-        self.inputText = QtWidgets.QLineEdit(self.centralwidget)
-        self.inputText.setGeometry(QtCore.QRect(10, 0, 271, 41))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        font.setBold(False)
-        font.setWeight(50)
-        self.inputText.setFont(font)
-        self.inputText.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
-        self.inputText.setAutoFillBackground(False)
-        self.inputText.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.inputText.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.inputText.setReadOnly(True)
-        self.inputText.setClearButtonEnabled(False)
-        self.inputText.setObjectName("inputText")
+		self.inputText = QtWidgets.QLineEdit(self.centralwidget)
+		self.inputText.setGeometry(QtCore.QRect(10, 0, 271, 41))
+		font = QtGui.QFont()
+		font.setPointSize(16)
+		font.setBold(False)
+		font.setWeight(50)
+		self.inputText.setFont(font)
+		self.inputText.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+		self.inputText.setAutoFillBackground(False)
+		self.inputText.setEchoMode(QtWidgets.QLineEdit.Normal)
+		self.inputText.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+		self.inputText.setReadOnly(True)
+		self.inputText.setClearButtonEnabled(False)
+		self.inputText.setObjectName("inputText")
 
-        self.CE_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.CE_btn.setGeometry(QtCore.QRect(10, 60, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.CE_btn.setFont(font)
-        self.CE_btn.setObjectName("CE_btn")
+		self.CE_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.CE_btn.setGeometry(QtCore.QRect(10, 60, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.CE_btn.setFont(font)
+		self.CE_btn.setObjectName("CE_btn")
 
-        self.C_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.C_btn.setGeometry(QtCore.QRect(80, 60, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.C_btn.setFont(font)
-        self.C_btn.setObjectName("C_btn")
+		self.C_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.C_btn.setGeometry(QtCore.QRect(80, 60, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.C_btn.setFont(font)
+		self.C_btn.setObjectName("C_btn")
 
-        self.backspace_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.backspace_btn.setGeometry(QtCore.QRect(150, 60, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.backspace_btn.setFont(font)
-        self.backspace_btn.setObjectName("backspace_btn")
+		self.backspace_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.backspace_btn.setGeometry(QtCore.QRect(150, 60, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.backspace_btn.setFont(font)
+		self.backspace_btn.setObjectName("backspace_btn")
 
-        self.divide_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.divide_btn.setGeometry(QtCore.QRect(220, 60, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.divide_btn.setFont(font)
-        self.divide_btn.setCheckable(True)
-        self.divide_btn.setObjectName("divide_btn")
+		self.no0_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.no0_btn.setGeometry(QtCore.QRect(80, 260, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.no0_btn.setFont(font)
+		self.no0_btn.setObjectName("no0_btn")
+		self.no0_btn.character = '0'
 
-        self.no9_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.no9_btn.setGeometry(QtCore.QRect(150, 110, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.no9_btn.setFont(font)
-        self.no9_btn.setObjectName("no9_btn")
+		self.no1_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.no1_btn.setGeometry(QtCore.QRect(10, 210, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.no1_btn.setFont(font)
+		self.no1_btn.setObjectName("no1_btn")
+		self.no1_btn.character = '1'
 
-        self.no7_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.no7_btn.setGeometry(QtCore.QRect(10, 110, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.no7_btn.setFont(font)
-        self.no7_btn.setObjectName("no7_btn")
+		self.no2_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.no2_btn.setGeometry(QtCore.QRect(80, 210, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.no2_btn.setFont(font)
+		self.no2_btn.setObjectName("no2_btn")
+		self.no2_btn.character = '2'
 
-        self.multiply_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.multiply_btn.setGeometry(QtCore.QRect(220, 110, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.multiply_btn.setFont(font)
-        self.multiply_btn.setCheckable(True)
-        self.multiply_btn.setObjectName("multiply_btn")
+		self.no3_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.no3_btn.setGeometry(QtCore.QRect(150, 210, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.no3_btn.setFont(font)
+		self.no3_btn.setObjectName("no3_btn")
+		self.no3_btn.character = '3'
 
-        self.no8_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.no8_btn.setGeometry(QtCore.QRect(80, 110, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.no8_btn.setFont(font)
-        self.no8_btn.setObjectName("no8_btn")
+		self.no4_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.no4_btn.setGeometry(QtCore.QRect(10, 160, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.no4_btn.setFont(font)
+		self.no4_btn.setObjectName("no4_btn")
+		self.no4_btn.character = '4'
 
-        self.no6_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.no6_btn.setGeometry(QtCore.QRect(150, 160, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.no6_btn.setFont(font)
-        self.no6_btn.setObjectName("no6_btn")
+		self.no5_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.no5_btn.setGeometry(QtCore.QRect(80, 160, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.no5_btn.setFont(font)
+		self.no5_btn.setObjectName("no5_btn")
+		self.no5_btn.character = '5'
 
-        self.add_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.add_btn.setGeometry(QtCore.QRect(220, 210, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.add_btn.setFont(font)
-        self.add_btn.setCheckable(True)
-        self.add_btn.setObjectName("add_btn")
+		self.no6_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.no6_btn.setGeometry(QtCore.QRect(150, 160, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.no6_btn.setFont(font)
+		self.no6_btn.setObjectName("no6_btn")
+		self.no6_btn.character = '6'
 
-        self.no4_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.no4_btn.setGeometry(QtCore.QRect(10, 160, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.no4_btn.setFont(font)
-        self.no4_btn.setObjectName("no4_btn")
+		self.no7_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.no7_btn.setGeometry(QtCore.QRect(10, 110, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.no7_btn.setFont(font)
+		self.no7_btn.setObjectName("no7_btn")
+		self.no7_btn.character = '7'
 
-        self.no1_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.no1_btn.setGeometry(QtCore.QRect(10, 210, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.no1_btn.setFont(font)
-        self.no1_btn.setObjectName("no1_btn")
+		self.no8_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.no8_btn.setGeometry(QtCore.QRect(80, 110, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.no8_btn.setFont(font)
+		self.no8_btn.setObjectName("no8_btn")
+		self.no8_btn.character = '8'
 
-        self.subtract_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.subtract_btn.setGeometry(QtCore.QRect(220, 160, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.subtract_btn.setFont(font)
-        self.subtract_btn.setCheckable(True)
-        self.subtract_btn.setChecked(False)
-        self.subtract_btn.setObjectName("subtract_btn")
+		self.no9_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.no9_btn.setGeometry(QtCore.QRect(150, 110, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.no9_btn.setFont(font)
+		self.no9_btn.setObjectName("no9_btn")
+		self.no9_btn.character = '9'
 
-        self.no2_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.no2_btn.setGeometry(QtCore.QRect(80, 210, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.no2_btn.setFont(font)
-        self.no2_btn.setObjectName("no2_btn")
+		self.decimal_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.decimal_btn.setGeometry(QtCore.QRect(150, 260, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.decimal_btn.setFont(font)
+		self.decimal_btn.setObjectName("decimal_btn")
+		self.decimal_btn.character = '.'
 
-        self.no3_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.no3_btn.setGeometry(QtCore.QRect(150, 210, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.no3_btn.setFont(font)
-        self.no3_btn.setObjectName("no3_btn")
+		self.divide_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.divide_btn.setGeometry(QtCore.QRect(220, 60, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.divide_btn.setFont(font)
+		self.divide_btn.setCheckable(True)
+		self.divide_btn.setObjectName("divide_btn")
+		self.divide_btn.character = '/'
 
-        self.no5_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.no5_btn.setGeometry(QtCore.QRect(80, 160, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.no5_btn.setFont(font)
-        self.no5_btn.setObjectName("no5_btn")
+		self.multiply_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.multiply_btn.setGeometry(QtCore.QRect(220, 110, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.multiply_btn.setFont(font)
+		self.multiply_btn.setCheckable(True)
+		self.multiply_btn.setObjectName("multiply_btn")
+		self.multiply_btn.character = '*'
 
-        self.decimal_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.decimal_btn.setGeometry(QtCore.QRect(150, 260, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.decimal_btn.setFont(font)
-        self.decimal_btn.setObjectName("decimal_btn")
+		self.add_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.add_btn.setGeometry(QtCore.QRect(220, 210, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.add_btn.setFont(font)
+		self.add_btn.setCheckable(True)
+		self.add_btn.setObjectName("add_btn")
+		self.add_btn.character = '+'
 
-        self.equals_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.equals_btn.setGeometry(QtCore.QRect(220, 260, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.equals_btn.setFont(font)
-        self.equals_btn.setCheckable(False)
-        self.equals_btn.setChecked(False)
-        self.equals_btn.setObjectName("equals_btn")
+		self.subtract_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.subtract_btn.setGeometry(QtCore.QRect(220, 160, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.subtract_btn.setFont(font)
+		self.subtract_btn.setCheckable(True)
+		self.subtract_btn.setChecked(False)
+		self.subtract_btn.setObjectName("subtract_btn")
+		self.subtract_btn.character = '-'
 
-        self.no0_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.no0_btn.setGeometry(QtCore.QRect(80, 260, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.no0_btn.setFont(font)
-        self.no0_btn.setObjectName("no0_btn")
+		self.equals_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.equals_btn.setGeometry(QtCore.QRect(220, 260, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.equals_btn.setFont(font)
+		self.equals_btn.setCheckable(False)
+		self.equals_btn.setChecked(False)
+		self.equals_btn.setObjectName("equals_btn")
 
-        self.changeSign_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.changeSign_btn.setGeometry(QtCore.QRect(10, 260, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.changeSign_btn.setFont(font)
-        self.changeSign_btn.setObjectName("changeSign_btn")
+		self.changeSign_btn = QtWidgets.QPushButton(self.centralwidget)
+		self.changeSign_btn.setGeometry(QtCore.QRect(10, 260, 61, 41))
+		font = QtGui.QFont()
+		font.setPointSize(14)
+		self.changeSign_btn.setFont(font)
+		self.changeSign_btn.setObjectName("changeSign_btn")
 
-        MainWindow.setCentralWidget(self.centralwidget)
+		MainWindow.setCentralWidget(self.centralwidget)
 
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 288, 21))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+		self.menubar = QtWidgets.QMenuBar(MainWindow)
+		self.menubar.setGeometry(QtCore.QRect(0, 0, 288, 21))
+		self.menubar.setObjectName("menubar")
+		MainWindow.setMenuBar(self.menubar)
 
-        self.retranslateUi(MainWindow)
+		self.statusbar = QtWidgets.QStatusBar(MainWindow)
+		self.statusbar.setObjectName("statusbar")
+		MainWindow.setStatusBar(self.statusbar)
 
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
-        MainWindow.setTabOrder(self.inputText, self.CE_btn)
-        MainWindow.setTabOrder(self.CE_btn, self.C_btn)
-        MainWindow.setTabOrder(self.C_btn, self.backspace_btn)
-        MainWindow.setTabOrder(self.backspace_btn, self.divide_btn)
-        MainWindow.setTabOrder(self.divide_btn, self.no7_btn)
-        MainWindow.setTabOrder(self.no7_btn, self.no8_btn)
-        MainWindow.setTabOrder(self.no8_btn, self.no9_btn)
-        MainWindow.setTabOrder(self.no9_btn, self.multiply_btn)
-        MainWindow.setTabOrder(self.multiply_btn, self.no4_btn)
-        MainWindow.setTabOrder(self.no4_btn, self.no5_btn)
-        MainWindow.setTabOrder(self.no5_btn, self.no6_btn)
-        MainWindow.setTabOrder(self.no6_btn, self.subtract_btn)
-        MainWindow.setTabOrder(self.subtract_btn, self.no1_btn)
-        MainWindow.setTabOrder(self.no1_btn, self.no2_btn)
-        MainWindow.setTabOrder(self.no2_btn, self.no3_btn)
-        MainWindow.setTabOrder(self.no3_btn, self.add_btn)
-        MainWindow.setTabOrder(self.add_btn, self.changeSign_btn)
-        MainWindow.setTabOrder(self.changeSign_btn, self.no0_btn)
-        MainWindow.setTabOrder(self.no0_btn, self.decimal_btn)
-        MainWindow.setTabOrder(self.decimal_btn, self.equals_btn)
+		self.retranslateUi(MainWindow)
+		QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-        self.no0_btn.clicked.connect(lambda: self.numberClicked(0))
-        self.no1_btn.clicked.connect(lambda: self.numberClicked(1))       
-        self.no2_btn.clicked.connect(lambda: self.numberClicked(2))
-        self.no3_btn.clicked.connect(lambda: self.numberClicked(3))
-        self.no4_btn.clicked.connect(lambda: self.numberClicked(4))
-        self.no5_btn.clicked.connect(lambda: self.numberClicked(5))
-        self.no6_btn.clicked.connect(lambda: self.numberClicked(6))
-        self.no7_btn.clicked.connect(lambda: self.numberClicked(7))
-        self.no8_btn.clicked.connect(lambda: self.numberClicked(8))
-        self.no9_btn.clicked.connect(lambda: self.numberClicked(9))
+		MainWindow.setTabOrder(self.inputText, self.CE_btn)
+		MainWindow.setTabOrder(self.CE_btn, self.C_btn)
+		MainWindow.setTabOrder(self.C_btn, self.backspace_btn)
+		MainWindow.setTabOrder(self.backspace_btn, self.divide_btn)
+		MainWindow.setTabOrder(self.divide_btn, self.no7_btn)
+		MainWindow.setTabOrder(self.no7_btn, self.no8_btn)
+		MainWindow.setTabOrder(self.no8_btn, self.no9_btn)
+		MainWindow.setTabOrder(self.no9_btn, self.multiply_btn)
+		MainWindow.setTabOrder(self.multiply_btn, self.no4_btn)
+		MainWindow.setTabOrder(self.no4_btn, self.no5_btn)
+		MainWindow.setTabOrder(self.no5_btn, self.no6_btn)
+		MainWindow.setTabOrder(self.no6_btn, self.subtract_btn)
+		MainWindow.setTabOrder(self.subtract_btn, self.no1_btn)
+		MainWindow.setTabOrder(self.no1_btn, self.no2_btn)
+		MainWindow.setTabOrder(self.no2_btn, self.no3_btn)
+		MainWindow.setTabOrder(self.no3_btn, self.add_btn)
+		MainWindow.setTabOrder(self.add_btn, self.changeSign_btn)
+		MainWindow.setTabOrder(self.changeSign_btn, self.no0_btn)
+		MainWindow.setTabOrder(self.no0_btn, self.decimal_btn)
+		MainWindow.setTabOrder(self.decimal_btn, self.equals_btn)
 
-        self.CE_btn.clicked.connect(lambda: self.inputText.setText("0"))
-        self.C_btn.clicked.connect(lambda: self.resetCalc())
-        self.backspace_btn.clicked.connect(lambda: self.backspace())
+		self.fieldButtons = [self.no0_btn, self.no1_btn, self.no2_btn, self.no3_btn, self.no4_btn, self.no5_btn, self.no6_btn, self.no7_btn, self.no8_btn, self.no9_btn, self.decimal_btn]
+		
+		self.no0_btn.clicked.connect(lambda: self.fieldButtonClicked(self.no0_btn))
+		self.no1_btn.clicked.connect(lambda: self.fieldButtonClicked(self.no1_btn))
+		self.no2_btn.clicked.connect(lambda: self.fieldButtonClicked(self.no2_btn))
+		self.no3_btn.clicked.connect(lambda: self.fieldButtonClicked(self.no3_btn))
+		self.no4_btn.clicked.connect(lambda: self.fieldButtonClicked(self.no4_btn))
+		self.no5_btn.clicked.connect(lambda: self.fieldButtonClicked(self.no5_btn))
+		self.no6_btn.clicked.connect(lambda: self.fieldButtonClicked(self.no6_btn))
+		self.no7_btn.clicked.connect(lambda: self.fieldButtonClicked(self.no7_btn))
+		self.no8_btn.clicked.connect(lambda: self.fieldButtonClicked(self.no8_btn))
+		self.no9_btn.clicked.connect(lambda: self.fieldButtonClicked(self.no9_btn))
+		self.decimal_btn.clicked.connect(lambda: self.fieldButtonClicked(self.decimal_btn))
 
-    def retranslateUi(self, MainWindow):
-        _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.inputText.setText(_translate("MainWindow", "0"))
-        self.CE_btn.setText(_translate("MainWindow", "CE"))
-        self.C_btn.setText(_translate("MainWindow", "C"))
-        self.backspace_btn.setText(_translate("MainWindow", "<--"))
-        self.divide_btn.setText(_translate("MainWindow", "/"))
-        self.no9_btn.setText(_translate("MainWindow", "9"))
-        self.no7_btn.setText(_translate("MainWindow", "7"))
-        self.multiply_btn.setText(_translate("MainWindow", "X"))
-        self.no8_btn.setText(_translate("MainWindow", "8"))
-        self.no6_btn.setText(_translate("MainWindow", "6"))
-        self.add_btn.setText(_translate("MainWindow", "+"))
-        self.no4_btn.setText(_translate("MainWindow", "4"))
-        self.no1_btn.setText(_translate("MainWindow", "1"))
-        self.subtract_btn.setText(_translate("MainWindow", "-"))
-        self.no2_btn.setText(_translate("MainWindow", "2"))
-        self.no3_btn.setText(_translate("MainWindow", "3"))
-        self.no5_btn.setText(_translate("MainWindow", "5"))
-        self.decimal_btn.setText(_translate("MainWindow", "."))
-        self.equals_btn.setText(_translate("MainWindow", "="))
-        self.equals_btn.setShortcut(_translate("MainWindow", "Return"))
-        self.no0_btn.setText(_translate("MainWindow", "0"))
-        self.changeSign_btn.setText(_translate("MainWindow", "+/-"))
+		self.CE_btn.clicked.connect(lambda: self.clear_btnClicked('CE'))
+		self.C_btn.clicked.connect(lambda: self.clear_btnClicked('C'))
 
-    def numberClicked(self, number):
-    	self.textInField = self.inputText.text()
-    	
-    	self.textInField = str(int(self.textInField)*10 + int(number))
-    	self.inputText.setText(self.textInField)
+		self.backspace_btn.clicked.connect(lambda: self.backspace_btnClicked())
 
-    def backspace(self):
-    	pass
+		self.changeSign_btn.clicked.connect(lambda: self.changeSign_btnClicked())
 
-    def resetCalc(self):
-    	pass
+		self.add_btn.clicked.connect(lambda: self.operatorClicked(self.add_btn))
+		self.subtract_btn.clicked.connect(lambda: self.operatorClicked(self.subtract_btn))
+		self.multiply_btn.clicked.connect(lambda: self.operatorClicked(self.multiply_btn))
+		self.divide_btn.clicked.connect(lambda: self.operatorClicked(self.divide_btn))
+
+		self.equals_btn.clicked.connect(lambda: self.equals_btnClicked())
+
+		self.operators = [self.add_btn, self.subtract_btn, self.multiply_btn, self.divide_btn]
+
+		self.resultHolding = ""
+		self.operatorActive = {"state":False, "character":""}
+
+	def retranslateUi(self, MainWindow):
+		_translate = QtCore.QCoreApplication.translate
+		MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+		self.inputText.setText(_translate("MainWindow", "0"))
+		self.CE_btn.setText(_translate("MainWindow", "CE"))
+		self.C_btn.setText(_translate("MainWindow", "C"))
+		self.backspace_btn.setText(_translate("MainWindow", "<--"))
+		self.divide_btn.setText(_translate("MainWindow", "/"))
+		self.no9_btn.setText(_translate("MainWindow", "9"))
+		self.no7_btn.setText(_translate("MainWindow", "7"))
+		self.multiply_btn.setText(_translate("MainWindow", "X"))
+		self.no8_btn.setText(_translate("MainWindow", "8"))
+		self.no6_btn.setText(_translate("MainWindow", "6"))
+		self.add_btn.setText(_translate("MainWindow", "+"))
+		self.no4_btn.setText(_translate("MainWindow", "4"))
+		self.no1_btn.setText(_translate("MainWindow", "1"))
+		self.subtract_btn.setText(_translate("MainWindow", "-"))
+		self.no2_btn.setText(_translate("MainWindow", "2"))
+		self.no3_btn.setText(_translate("MainWindow", "3"))
+		self.no5_btn.setText(_translate("MainWindow", "5"))
+		self.decimal_btn.setText(_translate("MainWindow", "."))
+		self.equals_btn.setText(_translate("MainWindow", "="))
+		self.equals_btn.setShortcut(_translate("MainWindow", "Return"))
+		self.no0_btn.setText(_translate("MainWindow", "0"))
+		self.changeSign_btn.setText(_translate("MainWindow", "+/-"))
+
+	def fieldButtonClicked(self, fieldButton):
+		self.textInField = self.inputText.text()
+
+		if self.operatorActive["state"]:
+			self.resultHolding += self.textInField + self.operatorActive["character"]
+			self.textInField = "0"
+			self.operatorActive["state"] = False
+			for operator in self.operators:
+				operator.setChecked(False)
+				operator.setDisabled(False)
+
+		if self.textInField in ["0",0]:
+			if fieldButton.character == self.decimal_btn.character:
+				pass
+			else:
+				self.textInField = ""
+
+		if fieldButton.character == self.decimal_btn.character:
+			self.decimal_btn.setDisabled(True)
+		elif len(self.textInField) >= 20:
+			for button in self.fieldButtons:
+				button.setDisabled(True)
+
+		self.textInField += fieldButton.character
+		self.inputText.setText(self.textInField)
+
+	def clear_btnClicked(self, buttonType=None, display="0"):
+		if buttonType.upper() in ['C']:
+			for operator in self.operators:
+				operator.setChecked(False)
+				operator.setDisabled(False)
+
+		self.inputText.setText(display)
+		self.decimal_btn.setDisabled(False)
+
+		for button in self.fieldButtons:
+			button.setDisabled(False)
+
+	def equals_btnClicked(self):
+		self.textInField = self.inputText.text()
+		for operator in self.operators:
+			operator.setChecked(False)
+			operator.setDisabled(False)
+
+		self.resultHolding += self.textInField
+
+		self.result = str(eval(str(self.resultHolding)))
+		self.resultHolding = ""
+
+		self.inputText.setText(self.result)
+
+	def backspace_btnClicked(self):
+		self.textInField = self.inputText.text()
+
+		if len(self.textInField) == 1:
+			self.textInField = "0"
+		else:
+			self.textInField = self.textInField[:-1]
+
+		for button in self.fieldButtons:
+			button.setDisabled(False)
+
+		self.inputText.setText(self.textInField)
+
+	def changeSign_btnClicked(self):
+		self.textInField = self.inputText.text()
+
+		if float(self.textInField) > 0:
+			self.textInField = "-" + self.textInField
+
+		elif float(self.textInField) < 0 and self.textInField[0] == '-':
+			self.textInField = self.textInField[1:]
+
+		self.inputText.setText(self.textInField)
+
+	def operatorClicked(self, operatorObject):
+		for operator in self.operators:
+			if operator != operatorObject:
+				operator.setChecked(False)
+				operator.setDisabled(False)
+
+		operatorObject.setDisabled(True)
+
+		self.operatorActive['state'] = True
+		self.operatorActive['character'] = operatorObject.character
 
 if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+	import sys
+	app = QtWidgets.QApplication(sys.argv)
+	app.setStyle('Fusion')
+	MainWindow = QtWidgets.QMainWindow()
+	ui = Ui_MainWindow()
+	ui.setupUi(MainWindow)
+	MainWindow.show()
+	sys.exit(app.exec_())
